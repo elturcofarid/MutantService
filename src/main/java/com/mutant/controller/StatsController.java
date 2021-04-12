@@ -1,7 +1,6 @@
 package com.mutant.controller;
 
 import com.mutant.dto.StatDto;
-import com.mutant.services.MutantService;
 import com.mutant.services.StatMutantService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

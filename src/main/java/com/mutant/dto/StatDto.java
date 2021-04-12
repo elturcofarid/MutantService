@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class StatDto {
 
-    public long count_mutant_dna;
+    private long countMutantDna;
 
-    public long count_human_dna;
+    private long countHumanDna;
 
-    public float ratio;
+    private float ratio;
 }

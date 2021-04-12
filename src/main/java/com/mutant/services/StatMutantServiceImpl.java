@@ -18,8 +18,8 @@ public class StatMutantServiceImpl implements StatMutantService {
         Long isNotMutant = mutantRepository.countByIsMutant(false);
 
 
-        return StatDto.builder().count_mutant_dna(isMutant)
-                .count_human_dna(isNotMutant)
+        return StatDto.builder().countMutantDna(isMutant)
+                .countHumanDna(isNotMutant)
                 .ratio(isNotMutant != 0 ? isMutant / isNotMutant : 0).build();
     }
 }

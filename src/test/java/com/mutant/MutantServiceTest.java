@@ -1,9 +1,7 @@
 package com.mutant;
 
 import com.mutant.dto.MutantDto;
-import com.mutant.dto.StatDto;
-import com.mutant.services.MutantService;
-import com.mutant.services.StatMutantService;
+import com.mutant.services.MutantServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,16 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
-class ServicioMutantesApplicationTests {
+class MutantServiceTest {
 
     @Autowired
-    MutantService mutantService;
-
-    @Autowired
-    StatMutantService statMutantService;
+    MutantServiceImpl mutantService;
 
     @Test
     void validateDNANoMutant() {
@@ -37,12 +31,4 @@ class ServicioMutantesApplicationTests {
 
         assertEquals(Boolean.TRUE, mutantService.isMutant(domain));
     }
-
-
-    @Test
-    void validateStat(){
-        assertNotNull(statMutantService.stat());
-    }
-
-
 }
