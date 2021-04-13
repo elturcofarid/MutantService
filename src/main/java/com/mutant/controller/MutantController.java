@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MutantController {
 
-    private MutantService service;
+    private final MutantService service;
 
     public MutantController(MutantService service) {
         this.service = service;

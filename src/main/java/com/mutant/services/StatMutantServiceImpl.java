@@ -4,6 +4,7 @@ import com.mutant.dto.StatDto;
 import com.mutant.persistence.repository.MutantRepository;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class StatMutantServiceImpl implements StatMutantService {
 
