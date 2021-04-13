@@ -19,12 +19,11 @@ public class MutantServiceImpl extends MutantValidate implements MutantService {
 
     public boolean isMutant(MutantDto input) {
 
-        Optional<MutantEntity> mutantEntityOptional = mutantRepository.findById(input.dna.stream().collect(Collectors.joining()));
-        if (mutantEntityOptional.isPresent()) {
-            return mutantEntityOptional.get().isMutant;
-        }
+        Optional<MutantEntity> mutantEntityOptional = mutantRepository.findById(String.join("", input.dna));
+        return mutantEntityOptional.map(mutantEntity -> mutantEntity.isMutant).orElseGet(() -> this.validateDNA(input.dna));
 
-        return this.validateDNA(input.dna);
     }
+
+
 
 }

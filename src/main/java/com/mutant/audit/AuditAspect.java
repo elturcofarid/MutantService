@@ -24,10 +24,9 @@ public class AuditAspect {
 
     @Around("execution(* com.mutant.services.MutantServiceImpl.*(..))")
     public Object audit(ProceedingJoinPoint joinPoint) throws Throwable {
-        Boolean resultado = (Boolean) joinPoint.proceed();
-        MutantDto d = (MutantDto) joinPoint.getArgs()[0];
-        saveMutant(d, resultado);
-        return resultado;
+        Boolean result = (Boolean) joinPoint.proceed();
+        saveMutant((MutantDto) joinPoint.getArgs()[0], result);
+        return result;
     }
 
     @Async

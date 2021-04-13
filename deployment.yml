@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mutant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mutant
+  template:
+    metadata:
+      labels:
+        app: mutant
+    spec:
+      containers:
+        - name: mutant
+          image: elturcofarid/mutant_service:1.0.1
+          ports:
+            - name: http-port
+              containerPort: 8087
+          resources:
+            requests:
+              memory: "350Mi"
+              cpu: "100m"
+            limits:
+              memory: "700Mi"
+              cpu: "850m"

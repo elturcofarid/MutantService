@@ -20,6 +20,6 @@ public class StatMutantServiceImpl implements StatMutantService {
 
         return StatDto.builder().countMutantDna(isMutant)
                 .countHumanDna(isNotMutant)
-                .ratio(isNotMutant != 0 ? isMutant / isNotMutant : 0).build();
+                .ratio(isNotMutant != 0 ? (float)isMutant / (float)isNotMutant : 0.0f).build();
     }
 }
