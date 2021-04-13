@@ -10,7 +10,7 @@ http://adb141e8419e441678f56969a1d9d119-2072567346.us-east-1.elb.amazonaws.com:8
 
 para realizar la prueba se expone el API por medio de SWAGGER : http://adb141e8419e441678f56969a1d9d119-2072567346.us-east-1.elb.amazonaws.com:8087/swagger-ui.html
 
-https://github.com/elturcofarid/MutantService/blob/master/swagger.JPG
+![stack Overflow](https://github.com/elturcofarid/MutantService/blob/master/swagger.JPG)
 
 Prueba Humano: 
 {
