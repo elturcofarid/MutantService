@@ -25,4 +25,4 @@ Prueba Mutante:
 
 
 <h2>Coverage</h2>
-![stack Overflow](https://github.com/elturcofarid/MutantService/blob/master/swagger.JPG)
+![stack Overflow](https://github.com/elturcofarid/MutantService/blob/master/coverage.PNG)
