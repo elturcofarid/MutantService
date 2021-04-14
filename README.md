@@ -37,4 +37,4 @@ Prueba Mutante:
 
 <h2>Pruebas Jmeter</h2>
 
-![jmeter]()
+![jmeter](https://github.com/elturcofarid/MutantService/blob/master/Captura.PNG)
