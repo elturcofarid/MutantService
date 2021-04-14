@@ -31,7 +31,7 @@ Prueba Mutante:
 
 <h2>Coverage</h2>
 
-(https://github.com/elturcofarid/MutantService/blob/master/coverage.PNG)
+![coverage](https://github.com/elturcofarid/MutantService/blob/master/coverage.PNG)
 
 
 
