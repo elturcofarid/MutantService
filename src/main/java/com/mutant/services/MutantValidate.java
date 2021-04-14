@@ -7,30 +7,27 @@ public class MutantValidate {
 	public boolean validateDNA(List<String> dna) {
 		int row =0;
 		int column  = 0;
-		int lengthH = dna.size();
-		int lengthV = dna.get(0).length();
+		int lengthMatrix = dna.size();
 
 		int countMutant = 0;
 		char[][] matrix = createMatrix(dna);
 
-		// hasta aqui llenado
-		for (row = 0; row < lengthH; row++) {
-			for (column = 0; column < lengthV; column++) {
-				// verifico si hay tres objectos mas en la Columna
+		for (row = 0; row < lengthMatrix; row++) {
+			for (column = 0; column < lengthMatrix; column++) {
 
-					if ((column + 3 < lengthV) && ((matrix[row][column] == matrix[row][column + 1]) && (matrix[row][column + 1] == matrix[row][column + 2])
+					if ((column + 3 < lengthMatrix) && ((matrix[row][column] == matrix[row][column + 1]) && (matrix[row][column + 1] == matrix[row][column + 2])
 							&& (matrix[row][column + 2] == matrix[row][column + 3])))
 						countMutant++;
 
 				if (countMutant < 2) {// verifico si hay tres objectos mas en la Fila
 
-					if ((row + 3 < lengthH) && ((matrix[row][column] == matrix[row + 1][column]) && (matrix[row + 1][column] == matrix[row + 2][column])
+					if ((row + 3 < lengthMatrix) && ((matrix[row][column] == matrix[row + 1][column]) && (matrix[row + 1][column] == matrix[row + 2][column])
 							&& (matrix[row + 2][column] == matrix[row + 3][column])))
 						countMutant++;
 
 					if (countMutant < 2) {// verifico si hay tres objectos mas en la Diagonal
 
-						if ((row + 3 < lengthH && column + 3 < lengthV) && ((matrix[row][column] == matrix[row + 1][column + 1]) && (matrix[row + 1][column + 1] == matrix[row + 2][column + 2])
+						if ((row + 3 < lengthMatrix && column + 3 < lengthMatrix) && ((matrix[row][column] == matrix[row + 1][column + 1]) && (matrix[row + 1][column + 1] == matrix[row + 2][column + 2])
 								&& (matrix[row + 2][column + 2] == matrix[row + 3][column + 3])))
 							countMutant++;
 
@@ -50,11 +47,10 @@ public class MutantValidate {
 	}
 
 	private char[][] createMatrix(List<String> dnas) {
-		int lengthH = dnas.size();
-		int lengthV = dnas.get(0).length();
+		int lengthMatrix = dnas.size();
 		int row = 0;
 		int column = 0;
-		char[][] matrix = new char[lengthH][lengthV];
+		char[][] matrix = new char[lengthMatrix][lengthMatrix];
 		for (String _dna : dnas) {
 			for (char ch : _dna.toCharArray()) {
 				matrix[row][column] = ch;
