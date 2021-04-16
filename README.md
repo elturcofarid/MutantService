@@ -1,5 +1,7 @@
 <h1>Examen Mercadolibre</h1>
 
+<h2>Algoritmo de solución :  Algoritmo trasitividad</h2>
+
 <h3>Arquitecturas utilizada</h3>
 
 <ol>
